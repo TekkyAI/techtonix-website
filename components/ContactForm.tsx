@@ -13,10 +13,16 @@ export default function ContactForm() {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (formData: FormData) => {
-    const token = await recaptchaRef.current?.executeAsync();
-    if (token) {
-      formData.append('g-recaptcha-response', token);
-      formAction(formData);
+    try {
+      const token = await recaptchaRef.current?.executeAsync();
+      if (token) {
+        formData.set('g-recaptcha-response', token);
+        await formAction(formData);
+      } else {
+        console.error('ReCAPTCHA token generation failed');
+      }
+    } catch (error) {
+      console.error('ReCAPTCHA error:', error);
     }
   };
 

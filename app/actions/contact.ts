@@ -18,6 +18,8 @@ export async function submitContactForm(prevState: FormState, formData: FormData
   
   // Let's assume the client appends the token to formData with key 'g-recaptcha-response'
   const recaptchaToken = formData.get('g-recaptcha-response') as string;
+  
+  console.log('Received form data keys:', Array.from(formData.keys())); // Debug log
 
   if (!name || !email || !message || !recaptchaToken) {
     const missing = [];
