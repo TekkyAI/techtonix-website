@@ -41,7 +41,7 @@ export default function Gallery() {
         <div className="mb-20">
           <h2 className="text-[32px] leading-[38px] font-normal text-[#FAFAFA] mb-8 border-l-4 border-primary pl-4 font-sans">In The News</h2>
           <div 
-            className="max-w-md mx-auto transform -skew-x-6 hover:skew-x-0 transition-all duration-500 hover:scale-110 hover:z-20 cursor-pointer"
+            className="max-w-md mx-auto hover:scale-[1.02] transition-all duration-300 hover:shadow-2xl cursor-pointer"
             onClick={() => setSelectedImage({src: '/assets/TOI.jpeg', alt: 'Featured in Times of India'})}
           >
             <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl border border-border group">
@@ -63,7 +63,7 @@ export default function Gallery() {
           <h2 className="text-[32px] leading-[38px] font-normal text-[#FAFAFA] mb-8 border-l-4 border-primary pl-4 font-sans">Event Photos</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div 
-              className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group transform -skew-x-6 hover:skew-x-0 transition-all duration-500 hover:scale-110 hover:z-20 cursor-pointer"
+              className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group hover:scale-[1.02] transition-all duration-300 hover:shadow-2xl cursor-pointer"
               onClick={() => setSelectedImage({src: '/assets/yuvafest1.jpg', alt: 'Team Techtonix at YUVAFEST 2025'})}
             >
               <Image
@@ -77,7 +77,7 @@ export default function Gallery() {
               </div>
             </div>
             <div 
-              className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group transform -skew-x-6 hover:skew-x-0 transition-all duration-500 hover:scale-110 hover:z-20 cursor-pointer"
+              className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl border border-border group hover:scale-[1.02] transition-all duration-300 hover:shadow-2xl cursor-pointer"
               onClick={() => setSelectedImage({src: '/assets/yuvafest2.jpg', alt: 'Project Prototype Display'})}
             >
               <Image
