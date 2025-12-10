@@ -58,8 +58,8 @@ export async function submitContactForm(prevState: FormState, formData: FormData
     await resend.emails.send({
       from: 'Team TechTonix <hello@mail.teamtechtonix.online>',
       to: email,
-      subject: 'Thanks for stopping by!',
-      html: `<p>Hi ${name},</p><p>Thanks for showing interest and stopping by. We will revert back to you shortly.</p><p>Best,<br>Team Techtonix</p>`,
+      subject: 'Thanks for stopping by at Team Techtonix',
+      html: `<p>Hi ${name},</p><p>Thanks for showing interest and stopping by. We will revert back to you shortly.</p><p>Best,<br>Team Techtonix<br><a href="https://teamtechtonix.online">teamtechtonix.online</a></p>`,
     });
 
     // 2. Send notification email to team
