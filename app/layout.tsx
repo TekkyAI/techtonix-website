@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MobileNavbar from "@/components/MobileNavbar";
@@ -73,6 +76,9 @@ export default function RootLayout({
         </main>
         <MobileNavbar />
         <Footer />
+        <Analytics />
+        <SpeedInsights />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""} />
       </body>
     </html>
   );
